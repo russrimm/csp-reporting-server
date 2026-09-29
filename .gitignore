@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Runtime data (collected reports)
+data/
+
+# Local TLS material (private keys)
+certs/
+*.pem
+*.key
+*.pfx
+
+# Local deployment/session state (contains subscription, tenant, and app IDs)
+.copilot-azure/
+.azure/
+infra/*.local.json
+
+# Tool caches
+.impeccable/hook.cache.json
+.impeccable/questions/
+.impeccable/live/
+.impeccable/sketches/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs, build artifacts, OS files
+*.log
+*.zip
+coverage/
+.DS_Store
+Thumbs.db

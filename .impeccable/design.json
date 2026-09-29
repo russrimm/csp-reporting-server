@@ -1,0 +1,1055 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T12:45:00.160-05:00",
+  "title": "Design System: CSP Reporting Server",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Canvas",
+        "canonical": "#fafaf9",
+        "tonalRamp": [
+          "color-mix(in srgb, #fafaf9 22%, black)",
+          "color-mix(in srgb, #fafaf9 40%, black)",
+          "color-mix(in srgb, #fafaf9 58%, black)",
+          "color-mix(in srgb, #fafaf9 76%, black)",
+          "#fafaf9",
+          "color-mix(in srgb, #fafaf9 76%, white)",
+          "color-mix(in srgb, #fafaf9 52%, white)",
+          "color-mix(in srgb, #fafaf9 28%, white)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Panel Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "color-mix(in srgb, #ffffff 22%, black)",
+          "color-mix(in srgb, #ffffff 40%, black)",
+          "color-mix(in srgb, #ffffff 58%, black)",
+          "color-mix(in srgb, #ffffff 76%, black)",
+          "#ffffff",
+          "color-mix(in srgb, #ffffff 76%, white)",
+          "color-mix(in srgb, #ffffff 52%, white)",
+          "color-mix(in srgb, #ffffff 28%, white)"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Inset Surface",
+        "canonical": "#f4f4f3",
+        "tonalRamp": [
+          "color-mix(in srgb, #f4f4f3 22%, black)",
+          "color-mix(in srgb, #f4f4f3 40%, black)",
+          "color-mix(in srgb, #f4f4f3 58%, black)",
+          "color-mix(in srgb, #f4f4f3 76%, black)",
+          "#f4f4f3",
+          "color-mix(in srgb, #f4f4f3 76%, white)",
+          "color-mix(in srgb, #f4f4f3 52%, white)",
+          "color-mix(in srgb, #f4f4f3 28%, white)"
+        ]
+      },
+      "surface-3": {
+        "role": "neutral",
+        "displayName": "Pressed Surface",
+        "canonical": "#ececea",
+        "tonalRamp": [
+          "color-mix(in srgb, #ececea 22%, black)",
+          "color-mix(in srgb, #ececea 40%, black)",
+          "color-mix(in srgb, #ececea 58%, black)",
+          "color-mix(in srgb, #ececea 76%, black)",
+          "#ececea",
+          "color-mix(in srgb, #ececea 76%, white)",
+          "color-mix(in srgb, #ececea 52%, white)",
+          "color-mix(in srgb, #ececea 28%, white)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline Border",
+        "canonical": "#e5e5e2",
+        "tonalRamp": [
+          "color-mix(in srgb, #e5e5e2 22%, black)",
+          "color-mix(in srgb, #e5e5e2 40%, black)",
+          "color-mix(in srgb, #e5e5e2 58%, black)",
+          "color-mix(in srgb, #e5e5e2 76%, black)",
+          "#e5e5e2",
+          "color-mix(in srgb, #e5e5e2 76%, white)",
+          "color-mix(in srgb, #e5e5e2 52%, white)",
+          "color-mix(in srgb, #e5e5e2 28%, white)"
+        ]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "#d3d3cf",
+        "tonalRamp": [
+          "color-mix(in srgb, #d3d3cf 22%, black)",
+          "color-mix(in srgb, #d3d3cf 40%, black)",
+          "color-mix(in srgb, #d3d3cf 58%, black)",
+          "color-mix(in srgb, #d3d3cf 76%, black)",
+          "#d3d3cf",
+          "color-mix(in srgb, #d3d3cf 76%, white)",
+          "color-mix(in srgb, #d3d3cf 52%, white)",
+          "color-mix(in srgb, #d3d3cf 28%, white)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Primary Text",
+        "canonical": "#18181b",
+        "tonalRamp": [
+          "color-mix(in srgb, #18181b 22%, black)",
+          "color-mix(in srgb, #18181b 40%, black)",
+          "color-mix(in srgb, #18181b 58%, black)",
+          "color-mix(in srgb, #18181b 76%, black)",
+          "#18181b",
+          "color-mix(in srgb, #18181b 76%, white)",
+          "color-mix(in srgb, #18181b 52%, white)",
+          "color-mix(in srgb, #18181b 28%, white)"
+        ]
+      },
+      "text-2": {
+        "role": "neutral",
+        "displayName": "Secondary Text",
+        "canonical": "#4b4b53",
+        "tonalRamp": [
+          "color-mix(in srgb, #4b4b53 22%, black)",
+          "color-mix(in srgb, #4b4b53 40%, black)",
+          "color-mix(in srgb, #4b4b53 58%, black)",
+          "color-mix(in srgb, #4b4b53 76%, black)",
+          "#4b4b53",
+          "color-mix(in srgb, #4b4b53 76%, white)",
+          "color-mix(in srgb, #4b4b53 52%, white)",
+          "color-mix(in srgb, #4b4b53 28%, white)"
+        ]
+      },
+      "text-3": {
+        "role": "neutral",
+        "displayName": "Tertiary Text",
+        "canonical": "#6b6b74",
+        "tonalRamp": [
+          "color-mix(in srgb, #6b6b74 22%, black)",
+          "color-mix(in srgb, #6b6b74 40%, black)",
+          "color-mix(in srgb, #6b6b74 58%, black)",
+          "color-mix(in srgb, #6b6b74 76%, black)",
+          "#6b6b74",
+          "color-mix(in srgb, #6b6b74 76%, white)",
+          "color-mix(in srgb, #6b6b74 52%, white)",
+          "color-mix(in srgb, #6b6b74 28%, white)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Diagnostic Blue",
+        "canonical": "#3451d1",
+        "tonalRamp": [
+          "color-mix(in srgb, #3451d1 22%, black)",
+          "color-mix(in srgb, #3451d1 40%, black)",
+          "color-mix(in srgb, #3451d1 58%, black)",
+          "color-mix(in srgb, #3451d1 76%, black)",
+          "#3451d1",
+          "color-mix(in srgb, #3451d1 76%, white)",
+          "color-mix(in srgb, #3451d1 52%, white)",
+          "color-mix(in srgb, #3451d1 28%, white)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Diagnostic Blue Wash",
+        "canonical": "#eef1fd",
+        "tonalRamp": [
+          "color-mix(in srgb, #eef1fd 22%, black)",
+          "color-mix(in srgb, #eef1fd 40%, black)",
+          "color-mix(in srgb, #eef1fd 58%, black)",
+          "color-mix(in srgb, #eef1fd 76%, black)",
+          "#eef1fd",
+          "color-mix(in srgb, #eef1fd 76%, white)",
+          "color-mix(in srgb, #eef1fd 52%, white)",
+          "color-mix(in srgb, #eef1fd 28%, white)"
+        ]
+      },
+      "accent-text": {
+        "role": "primary",
+        "displayName": "Diagnostic Blue Text",
+        "canonical": "#2a44b8",
+        "tonalRamp": [
+          "color-mix(in srgb, #2a44b8 22%, black)",
+          "color-mix(in srgb, #2a44b8 40%, black)",
+          "color-mix(in srgb, #2a44b8 58%, black)",
+          "color-mix(in srgb, #2a44b8 76%, black)",
+          "#2a44b8",
+          "color-mix(in srgb, #2a44b8 76%, white)",
+          "color-mix(in srgb, #2a44b8 52%, white)",
+          "color-mix(in srgb, #2a44b8 28%, white)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus Blue",
+        "canonical": "#3451d1",
+        "tonalRamp": [
+          "color-mix(in srgb, #3451d1 22%, black)",
+          "color-mix(in srgb, #3451d1 40%, black)",
+          "color-mix(in srgb, #3451d1 58%, black)",
+          "color-mix(in srgb, #3451d1 76%, black)",
+          "#3451d1",
+          "color-mix(in srgb, #3451d1 76%, white)",
+          "color-mix(in srgb, #3451d1 52%, white)",
+          "color-mix(in srgb, #3451d1 28%, white)"
+        ]
+      },
+      "enforce": {
+        "role": "state",
+        "displayName": "Enforced Red",
+        "canonical": "#c9252d",
+        "tonalRamp": [
+          "color-mix(in srgb, #c9252d 22%, black)",
+          "color-mix(in srgb, #c9252d 40%, black)",
+          "color-mix(in srgb, #c9252d 58%, black)",
+          "color-mix(in srgb, #c9252d 76%, black)",
+          "#c9252d",
+          "color-mix(in srgb, #c9252d 76%, white)",
+          "color-mix(in srgb, #c9252d 52%, white)",
+          "color-mix(in srgb, #c9252d 28%, white)"
+        ]
+      },
+      "enforce-soft": {
+        "role": "state",
+        "displayName": "Enforced Red Wash",
+        "canonical": "#fdecec",
+        "tonalRamp": [
+          "color-mix(in srgb, #fdecec 22%, black)",
+          "color-mix(in srgb, #fdecec 40%, black)",
+          "color-mix(in srgb, #fdecec 58%, black)",
+          "color-mix(in srgb, #fdecec 76%, black)",
+          "#fdecec",
+          "color-mix(in srgb, #fdecec 76%, white)",
+          "color-mix(in srgb, #fdecec 52%, white)",
+          "color-mix(in srgb, #fdecec 28%, white)"
+        ]
+      },
+      "report": {
+        "role": "state",
+        "displayName": "Report Amber",
+        "canonical": "#9a5b00",
+        "tonalRamp": [
+          "color-mix(in srgb, #9a5b00 22%, black)",
+          "color-mix(in srgb, #9a5b00 40%, black)",
+          "color-mix(in srgb, #9a5b00 58%, black)",
+          "color-mix(in srgb, #9a5b00 76%, black)",
+          "#9a5b00",
+          "color-mix(in srgb, #9a5b00 76%, white)",
+          "color-mix(in srgb, #9a5b00 52%, white)",
+          "color-mix(in srgb, #9a5b00 28%, white)"
+        ]
+      },
+      "report-soft": {
+        "role": "state",
+        "displayName": "Report Amber Wash",
+        "canonical": "#fdf3e2",
+        "tonalRamp": [
+          "color-mix(in srgb, #fdf3e2 22%, black)",
+          "color-mix(in srgb, #fdf3e2 40%, black)",
+          "color-mix(in srgb, #fdf3e2 58%, black)",
+          "color-mix(in srgb, #fdf3e2 76%, black)",
+          "#fdf3e2",
+          "color-mix(in srgb, #fdf3e2 76%, white)",
+          "color-mix(in srgb, #fdf3e2 52%, white)",
+          "color-mix(in srgb, #fdf3e2 28%, white)"
+        ]
+      },
+      "live": {
+        "role": "state",
+        "displayName": "Live Green",
+        "canonical": "#16803c",
+        "tonalRamp": [
+          "color-mix(in srgb, #16803c 22%, black)",
+          "color-mix(in srgb, #16803c 40%, black)",
+          "color-mix(in srgb, #16803c 58%, black)",
+          "color-mix(in srgb, #16803c 76%, black)",
+          "#16803c",
+          "color-mix(in srgb, #16803c 76%, white)",
+          "color-mix(in srgb, #16803c 52%, white)",
+          "color-mix(in srgb, #16803c 28%, white)"
+        ]
+      },
+      "code-key": {
+        "role": "syntax",
+        "displayName": "Code Key Purple",
+        "canonical": "#7a3fc2",
+        "tonalRamp": [
+          "color-mix(in srgb, #7a3fc2 22%, black)",
+          "color-mix(in srgb, #7a3fc2 40%, black)",
+          "color-mix(in srgb, #7a3fc2 58%, black)",
+          "color-mix(in srgb, #7a3fc2 76%, black)",
+          "#7a3fc2",
+          "color-mix(in srgb, #7a3fc2 76%, white)",
+          "color-mix(in srgb, #7a3fc2 52%, white)",
+          "color-mix(in srgb, #7a3fc2 28%, white)"
+        ]
+      },
+      "code-string": {
+        "role": "syntax",
+        "displayName": "Code String Green",
+        "canonical": "#1f7a4d",
+        "tonalRamp": [
+          "color-mix(in srgb, #1f7a4d 22%, black)",
+          "color-mix(in srgb, #1f7a4d 40%, black)",
+          "color-mix(in srgb, #1f7a4d 58%, black)",
+          "color-mix(in srgb, #1f7a4d 76%, black)",
+          "#1f7a4d",
+          "color-mix(in srgb, #1f7a4d 76%, white)",
+          "color-mix(in srgb, #1f7a4d 52%, white)",
+          "color-mix(in srgb, #1f7a4d 28%, white)"
+        ]
+      },
+      "code-number": {
+        "role": "syntax",
+        "displayName": "Code Number Orange",
+        "canonical": "#b3510f",
+        "tonalRamp": [
+          "color-mix(in srgb, #b3510f 22%, black)",
+          "color-mix(in srgb, #b3510f 40%, black)",
+          "color-mix(in srgb, #b3510f 58%, black)",
+          "color-mix(in srgb, #b3510f 76%, black)",
+          "#b3510f",
+          "color-mix(in srgb, #b3510f 76%, white)",
+          "color-mix(in srgb, #b3510f 52%, white)",
+          "color-mix(in srgb, #b3510f 28%, white)"
+        ]
+      },
+      "code-literal": {
+        "role": "syntax",
+        "displayName": "Code Literal Blue",
+        "canonical": "#3451d1",
+        "tonalRamp": [
+          "color-mix(in srgb, #3451d1 22%, black)",
+          "color-mix(in srgb, #3451d1 40%, black)",
+          "color-mix(in srgb, #3451d1 58%, black)",
+          "color-mix(in srgb, #3451d1 76%, black)",
+          "#3451d1",
+          "color-mix(in srgb, #3451d1 76%, white)",
+          "color-mix(in srgb, #3451d1 52%, white)",
+          "color-mix(in srgb, #3451d1 28%, white)"
+        ]
+      },
+      "fam-script": {
+        "role": "categorical",
+        "displayName": "Script Family",
+        "canonical": "#b36b00",
+        "tonalRamp": [
+          "color-mix(in srgb, #b36b00 22%, black)",
+          "color-mix(in srgb, #b36b00 40%, black)",
+          "color-mix(in srgb, #b36b00 58%, black)",
+          "color-mix(in srgb, #b36b00 76%, black)",
+          "#b36b00",
+          "color-mix(in srgb, #b36b00 76%, white)",
+          "color-mix(in srgb, #b36b00 52%, white)",
+          "color-mix(in srgb, #b36b00 28%, white)"
+        ]
+      },
+      "fam-style": {
+        "role": "categorical",
+        "displayName": "Style Family",
+        "canonical": "#c23a72",
+        "tonalRamp": [
+          "color-mix(in srgb, #c23a72 22%, black)",
+          "color-mix(in srgb, #c23a72 40%, black)",
+          "color-mix(in srgb, #c23a72 58%, black)",
+          "color-mix(in srgb, #c23a72 76%, black)",
+          "#c23a72",
+          "color-mix(in srgb, #c23a72 76%, white)",
+          "color-mix(in srgb, #c23a72 52%, white)",
+          "color-mix(in srgb, #c23a72 28%, white)"
+        ]
+      },
+      "fam-media": {
+        "role": "categorical",
+        "displayName": "Media Family",
+        "canonical": "#0e8577",
+        "tonalRamp": [
+          "color-mix(in srgb, #0e8577 22%, black)",
+          "color-mix(in srgb, #0e8577 40%, black)",
+          "color-mix(in srgb, #0e8577 58%, black)",
+          "color-mix(in srgb, #0e8577 76%, black)",
+          "#0e8577",
+          "color-mix(in srgb, #0e8577 76%, white)",
+          "color-mix(in srgb, #0e8577 52%, white)",
+          "color-mix(in srgb, #0e8577 28%, white)"
+        ]
+      },
+      "fam-connect": {
+        "role": "categorical",
+        "displayName": "Connect Family",
+        "canonical": "#2d6ed6",
+        "tonalRamp": [
+          "color-mix(in srgb, #2d6ed6 22%, black)",
+          "color-mix(in srgb, #2d6ed6 40%, black)",
+          "color-mix(in srgb, #2d6ed6 58%, black)",
+          "color-mix(in srgb, #2d6ed6 76%, black)",
+          "#2d6ed6",
+          "color-mix(in srgb, #2d6ed6 76%, white)",
+          "color-mix(in srgb, #2d6ed6 52%, white)",
+          "color-mix(in srgb, #2d6ed6 28%, white)"
+        ]
+      },
+      "fam-frame": {
+        "role": "categorical",
+        "displayName": "Frame Family",
+        "canonical": "#7b4bd6",
+        "tonalRamp": [
+          "color-mix(in srgb, #7b4bd6 22%, black)",
+          "color-mix(in srgb, #7b4bd6 40%, black)",
+          "color-mix(in srgb, #7b4bd6 58%, black)",
+          "color-mix(in srgb, #7b4bd6 76%, black)",
+          "#7b4bd6",
+          "color-mix(in srgb, #7b4bd6 76%, white)",
+          "color-mix(in srgb, #7b4bd6 52%, white)",
+          "color-mix(in srgb, #7b4bd6 28%, white)"
+        ]
+      },
+      "fam-other": {
+        "role": "categorical",
+        "displayName": "Other Family",
+        "canonical": "#71717a",
+        "tonalRamp": [
+          "color-mix(in srgb, #71717a 22%, black)",
+          "color-mix(in srgb, #71717a 40%, black)",
+          "color-mix(in srgb, #71717a 58%, black)",
+          "color-mix(in srgb, #71717a 76%, black)",
+          "#71717a",
+          "color-mix(in srgb, #71717a 76%, white)",
+          "color-mix(in srgb, #71717a 52%, white)",
+          "color-mix(in srgb, #71717a 28%, white)"
+        ]
+      },
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Dark Canvas",
+        "canonical": "#0c0c0e",
+        "tonalRamp": [
+          "color-mix(in srgb, #0c0c0e 22%, black)",
+          "color-mix(in srgb, #0c0c0e 40%, black)",
+          "color-mix(in srgb, #0c0c0e 58%, black)",
+          "color-mix(in srgb, #0c0c0e 76%, black)",
+          "#0c0c0e",
+          "color-mix(in srgb, #0c0c0e 76%, white)",
+          "color-mix(in srgb, #0c0c0e 52%, white)",
+          "color-mix(in srgb, #0c0c0e 28%, white)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Panel Surface",
+        "canonical": "#121215",
+        "tonalRamp": [
+          "color-mix(in srgb, #121215 22%, black)",
+          "color-mix(in srgb, #121215 40%, black)",
+          "color-mix(in srgb, #121215 58%, black)",
+          "color-mix(in srgb, #121215 76%, black)",
+          "#121215",
+          "color-mix(in srgb, #121215 76%, white)",
+          "color-mix(in srgb, #121215 52%, white)",
+          "color-mix(in srgb, #121215 28%, white)"
+        ]
+      },
+      "dark-surface-2": {
+        "role": "neutral",
+        "displayName": "Dark Inset Surface",
+        "canonical": "#19191d",
+        "tonalRamp": [
+          "color-mix(in srgb, #19191d 22%, black)",
+          "color-mix(in srgb, #19191d 40%, black)",
+          "color-mix(in srgb, #19191d 58%, black)",
+          "color-mix(in srgb, #19191d 76%, black)",
+          "#19191d",
+          "color-mix(in srgb, #19191d 76%, white)",
+          "color-mix(in srgb, #19191d 52%, white)",
+          "color-mix(in srgb, #19191d 28%, white)"
+        ]
+      },
+      "dark-surface-3": {
+        "role": "neutral",
+        "displayName": "Dark Pressed Surface",
+        "canonical": "#222227",
+        "tonalRamp": [
+          "color-mix(in srgb, #222227 22%, black)",
+          "color-mix(in srgb, #222227 40%, black)",
+          "color-mix(in srgb, #222227 58%, black)",
+          "color-mix(in srgb, #222227 76%, black)",
+          "#222227",
+          "color-mix(in srgb, #222227 76%, white)",
+          "color-mix(in srgb, #222227 52%, white)",
+          "color-mix(in srgb, #222227 28%, white)"
+        ]
+      },
+      "dark-border": {
+        "role": "neutral",
+        "displayName": "Dark Hairline Border",
+        "canonical": "#26262b",
+        "tonalRamp": [
+          "color-mix(in srgb, #26262b 22%, black)",
+          "color-mix(in srgb, #26262b 40%, black)",
+          "color-mix(in srgb, #26262b 58%, black)",
+          "color-mix(in srgb, #26262b 76%, black)",
+          "#26262b",
+          "color-mix(in srgb, #26262b 76%, white)",
+          "color-mix(in srgb, #26262b 52%, white)",
+          "color-mix(in srgb, #26262b 28%, white)"
+        ]
+      },
+      "dark-border-strong": {
+        "role": "neutral",
+        "displayName": "Dark Strong Hairline",
+        "canonical": "#35353c",
+        "tonalRamp": [
+          "color-mix(in srgb, #35353c 22%, black)",
+          "color-mix(in srgb, #35353c 40%, black)",
+          "color-mix(in srgb, #35353c 58%, black)",
+          "color-mix(in srgb, #35353c 76%, black)",
+          "#35353c",
+          "color-mix(in srgb, #35353c 76%, white)",
+          "color-mix(in srgb, #35353c 52%, white)",
+          "color-mix(in srgb, #35353c 28%, white)"
+        ]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Dark Primary Text",
+        "canonical": "#ececef",
+        "tonalRamp": [
+          "color-mix(in srgb, #ececef 22%, black)",
+          "color-mix(in srgb, #ececef 40%, black)",
+          "color-mix(in srgb, #ececef 58%, black)",
+          "color-mix(in srgb, #ececef 76%, black)",
+          "#ececef",
+          "color-mix(in srgb, #ececef 76%, white)",
+          "color-mix(in srgb, #ececef 52%, white)",
+          "color-mix(in srgb, #ececef 28%, white)"
+        ]
+      },
+      "dark-text-2": {
+        "role": "neutral",
+        "displayName": "Dark Secondary Text",
+        "canonical": "#b2b2ba",
+        "tonalRamp": [
+          "color-mix(in srgb, #b2b2ba 22%, black)",
+          "color-mix(in srgb, #b2b2ba 40%, black)",
+          "color-mix(in srgb, #b2b2ba 58%, black)",
+          "color-mix(in srgb, #b2b2ba 76%, black)",
+          "#b2b2ba",
+          "color-mix(in srgb, #b2b2ba 76%, white)",
+          "color-mix(in srgb, #b2b2ba 52%, white)",
+          "color-mix(in srgb, #b2b2ba 28%, white)"
+        ]
+      },
+      "dark-text-3": {
+        "role": "neutral",
+        "displayName": "Dark Tertiary Text",
+        "canonical": "#8d8d97",
+        "tonalRamp": [
+          "color-mix(in srgb, #8d8d97 22%, black)",
+          "color-mix(in srgb, #8d8d97 40%, black)",
+          "color-mix(in srgb, #8d8d97 58%, black)",
+          "color-mix(in srgb, #8d8d97 76%, black)",
+          "#8d8d97",
+          "color-mix(in srgb, #8d8d97 76%, white)",
+          "color-mix(in srgb, #8d8d97 52%, white)",
+          "color-mix(in srgb, #8d8d97 28%, white)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Dark Diagnostic Blue",
+        "canonical": "#8098ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #8098ff 22%, black)",
+          "color-mix(in srgb, #8098ff 40%, black)",
+          "color-mix(in srgb, #8098ff 58%, black)",
+          "color-mix(in srgb, #8098ff 76%, black)",
+          "#8098ff",
+          "color-mix(in srgb, #8098ff 76%, white)",
+          "color-mix(in srgb, #8098ff 52%, white)",
+          "color-mix(in srgb, #8098ff 28%, white)"
+        ]
+      },
+      "dark-accent-soft": {
+        "role": "primary",
+        "displayName": "Dark Diagnostic Blue Wash",
+        "canonical": "#1b2140",
+        "tonalRamp": [
+          "color-mix(in srgb, #1b2140 22%, black)",
+          "color-mix(in srgb, #1b2140 40%, black)",
+          "color-mix(in srgb, #1b2140 58%, black)",
+          "color-mix(in srgb, #1b2140 76%, black)",
+          "#1b2140",
+          "color-mix(in srgb, #1b2140 76%, white)",
+          "color-mix(in srgb, #1b2140 52%, white)",
+          "color-mix(in srgb, #1b2140 28%, white)"
+        ]
+      },
+      "dark-accent-text": {
+        "role": "primary",
+        "displayName": "Dark Diagnostic Blue Text",
+        "canonical": "#a9b8ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #a9b8ff 22%, black)",
+          "color-mix(in srgb, #a9b8ff 40%, black)",
+          "color-mix(in srgb, #a9b8ff 58%, black)",
+          "color-mix(in srgb, #a9b8ff 76%, black)",
+          "#a9b8ff",
+          "color-mix(in srgb, #a9b8ff 76%, white)",
+          "color-mix(in srgb, #a9b8ff 52%, white)",
+          "color-mix(in srgb, #a9b8ff 28%, white)"
+        ]
+      },
+      "dark-focus": {
+        "role": "primary",
+        "displayName": "Dark Focus Blue",
+        "canonical": "#8098ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #8098ff 22%, black)",
+          "color-mix(in srgb, #8098ff 40%, black)",
+          "color-mix(in srgb, #8098ff 58%, black)",
+          "color-mix(in srgb, #8098ff 76%, black)",
+          "#8098ff",
+          "color-mix(in srgb, #8098ff 76%, white)",
+          "color-mix(in srgb, #8098ff 52%, white)",
+          "color-mix(in srgb, #8098ff 28%, white)"
+        ]
+      },
+      "dark-enforce": {
+        "role": "state",
+        "displayName": "Dark Enforced Red",
+        "canonical": "#ff6b70",
+        "tonalRamp": [
+          "color-mix(in srgb, #ff6b70 22%, black)",
+          "color-mix(in srgb, #ff6b70 40%, black)",
+          "color-mix(in srgb, #ff6b70 58%, black)",
+          "color-mix(in srgb, #ff6b70 76%, black)",
+          "#ff6b70",
+          "color-mix(in srgb, #ff6b70 76%, white)",
+          "color-mix(in srgb, #ff6b70 52%, white)",
+          "color-mix(in srgb, #ff6b70 28%, white)"
+        ]
+      },
+      "dark-enforce-soft": {
+        "role": "state",
+        "displayName": "Dark Enforced Red Wash",
+        "canonical": "#3a1618",
+        "tonalRamp": [
+          "color-mix(in srgb, #3a1618 22%, black)",
+          "color-mix(in srgb, #3a1618 40%, black)",
+          "color-mix(in srgb, #3a1618 58%, black)",
+          "color-mix(in srgb, #3a1618 76%, black)",
+          "#3a1618",
+          "color-mix(in srgb, #3a1618 76%, white)",
+          "color-mix(in srgb, #3a1618 52%, white)",
+          "color-mix(in srgb, #3a1618 28%, white)"
+        ]
+      },
+      "dark-report": {
+        "role": "state",
+        "displayName": "Dark Report Amber",
+        "canonical": "#f2b04e",
+        "tonalRamp": [
+          "color-mix(in srgb, #f2b04e 22%, black)",
+          "color-mix(in srgb, #f2b04e 40%, black)",
+          "color-mix(in srgb, #f2b04e 58%, black)",
+          "color-mix(in srgb, #f2b04e 76%, black)",
+          "#f2b04e",
+          "color-mix(in srgb, #f2b04e 76%, white)",
+          "color-mix(in srgb, #f2b04e 52%, white)",
+          "color-mix(in srgb, #f2b04e 28%, white)"
+        ]
+      },
+      "dark-report-soft": {
+        "role": "state",
+        "displayName": "Dark Report Amber Wash",
+        "canonical": "#33260f",
+        "tonalRamp": [
+          "color-mix(in srgb, #33260f 22%, black)",
+          "color-mix(in srgb, #33260f 40%, black)",
+          "color-mix(in srgb, #33260f 58%, black)",
+          "color-mix(in srgb, #33260f 76%, black)",
+          "#33260f",
+          "color-mix(in srgb, #33260f 76%, white)",
+          "color-mix(in srgb, #33260f 52%, white)",
+          "color-mix(in srgb, #33260f 28%, white)"
+        ]
+      },
+      "dark-live": {
+        "role": "state",
+        "displayName": "Dark Live Green",
+        "canonical": "#45d07e",
+        "tonalRamp": [
+          "color-mix(in srgb, #45d07e 22%, black)",
+          "color-mix(in srgb, #45d07e 40%, black)",
+          "color-mix(in srgb, #45d07e 58%, black)",
+          "color-mix(in srgb, #45d07e 76%, black)",
+          "#45d07e",
+          "color-mix(in srgb, #45d07e 76%, white)",
+          "color-mix(in srgb, #45d07e 52%, white)",
+          "color-mix(in srgb, #45d07e 28%, white)"
+        ]
+      },
+      "dark-code-key": {
+        "role": "syntax",
+        "displayName": "Dark Code Key Purple",
+        "canonical": "#c5a1ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #c5a1ff 22%, black)",
+          "color-mix(in srgb, #c5a1ff 40%, black)",
+          "color-mix(in srgb, #c5a1ff 58%, black)",
+          "color-mix(in srgb, #c5a1ff 76%, black)",
+          "#c5a1ff",
+          "color-mix(in srgb, #c5a1ff 76%, white)",
+          "color-mix(in srgb, #c5a1ff 52%, white)",
+          "color-mix(in srgb, #c5a1ff 28%, white)"
+        ]
+      },
+      "dark-code-string": {
+        "role": "syntax",
+        "displayName": "Dark Code String Green",
+        "canonical": "#7fd6a4",
+        "tonalRamp": [
+          "color-mix(in srgb, #7fd6a4 22%, black)",
+          "color-mix(in srgb, #7fd6a4 40%, black)",
+          "color-mix(in srgb, #7fd6a4 58%, black)",
+          "color-mix(in srgb, #7fd6a4 76%, black)",
+          "#7fd6a4",
+          "color-mix(in srgb, #7fd6a4 76%, white)",
+          "color-mix(in srgb, #7fd6a4 52%, white)",
+          "color-mix(in srgb, #7fd6a4 28%, white)"
+        ]
+      },
+      "dark-code-number": {
+        "role": "syntax",
+        "displayName": "Dark Code Number Orange",
+        "canonical": "#f5a86b",
+        "tonalRamp": [
+          "color-mix(in srgb, #f5a86b 22%, black)",
+          "color-mix(in srgb, #f5a86b 40%, black)",
+          "color-mix(in srgb, #f5a86b 58%, black)",
+          "color-mix(in srgb, #f5a86b 76%, black)",
+          "#f5a86b",
+          "color-mix(in srgb, #f5a86b 76%, white)",
+          "color-mix(in srgb, #f5a86b 52%, white)",
+          "color-mix(in srgb, #f5a86b 28%, white)"
+        ]
+      },
+      "dark-code-literal": {
+        "role": "syntax",
+        "displayName": "Dark Code Literal Blue",
+        "canonical": "#8fa6ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #8fa6ff 22%, black)",
+          "color-mix(in srgb, #8fa6ff 40%, black)",
+          "color-mix(in srgb, #8fa6ff 58%, black)",
+          "color-mix(in srgb, #8fa6ff 76%, black)",
+          "#8fa6ff",
+          "color-mix(in srgb, #8fa6ff 76%, white)",
+          "color-mix(in srgb, #8fa6ff 52%, white)",
+          "color-mix(in srgb, #8fa6ff 28%, white)"
+        ]
+      },
+      "dark-fam-script": {
+        "role": "categorical",
+        "displayName": "Dark Script Family",
+        "canonical": "#e8ad4c",
+        "tonalRamp": [
+          "color-mix(in srgb, #e8ad4c 22%, black)",
+          "color-mix(in srgb, #e8ad4c 40%, black)",
+          "color-mix(in srgb, #e8ad4c 58%, black)",
+          "color-mix(in srgb, #e8ad4c 76%, black)",
+          "#e8ad4c",
+          "color-mix(in srgb, #e8ad4c 76%, white)",
+          "color-mix(in srgb, #e8ad4c 52%, white)",
+          "color-mix(in srgb, #e8ad4c 28%, white)"
+        ]
+      },
+      "dark-fam-style": {
+        "role": "categorical",
+        "displayName": "Dark Style Family",
+        "canonical": "#f07aa7",
+        "tonalRamp": [
+          "color-mix(in srgb, #f07aa7 22%, black)",
+          "color-mix(in srgb, #f07aa7 40%, black)",
+          "color-mix(in srgb, #f07aa7 58%, black)",
+          "color-mix(in srgb, #f07aa7 76%, black)",
+          "#f07aa7",
+          "color-mix(in srgb, #f07aa7 76%, white)",
+          "color-mix(in srgb, #f07aa7 52%, white)",
+          "color-mix(in srgb, #f07aa7 28%, white)"
+        ]
+      },
+      "dark-fam-media": {
+        "role": "categorical",
+        "displayName": "Dark Media Family",
+        "canonical": "#3fc7b5",
+        "tonalRamp": [
+          "color-mix(in srgb, #3fc7b5 22%, black)",
+          "color-mix(in srgb, #3fc7b5 40%, black)",
+          "color-mix(in srgb, #3fc7b5 58%, black)",
+          "color-mix(in srgb, #3fc7b5 76%, black)",
+          "#3fc7b5",
+          "color-mix(in srgb, #3fc7b5 76%, white)",
+          "color-mix(in srgb, #3fc7b5 52%, white)",
+          "color-mix(in srgb, #3fc7b5 28%, white)"
+        ]
+      },
+      "dark-fam-connect": {
+        "role": "categorical",
+        "displayName": "Dark Connect Family",
+        "canonical": "#6fa6ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #6fa6ff 22%, black)",
+          "color-mix(in srgb, #6fa6ff 40%, black)",
+          "color-mix(in srgb, #6fa6ff 58%, black)",
+          "color-mix(in srgb, #6fa6ff 76%, black)",
+          "#6fa6ff",
+          "color-mix(in srgb, #6fa6ff 76%, white)",
+          "color-mix(in srgb, #6fa6ff 52%, white)",
+          "color-mix(in srgb, #6fa6ff 28%, white)"
+        ]
+      },
+      "dark-fam-frame": {
+        "role": "categorical",
+        "displayName": "Dark Frame Family",
+        "canonical": "#b497ff",
+        "tonalRamp": [
+          "color-mix(in srgb, #b497ff 22%, black)",
+          "color-mix(in srgb, #b497ff 40%, black)",
+          "color-mix(in srgb, #b497ff 58%, black)",
+          "color-mix(in srgb, #b497ff 76%, black)",
+          "#b497ff",
+          "color-mix(in srgb, #b497ff 76%, white)",
+          "color-mix(in srgb, #b497ff 52%, white)",
+          "color-mix(in srgb, #b497ff 28%, white)"
+        ]
+      },
+      "dark-fam-other": {
+        "role": "categorical",
+        "displayName": "Dark Other Family",
+        "canonical": "#a1a1aa",
+        "tonalRamp": [
+          "color-mix(in srgb, #a1a1aa 22%, black)",
+          "color-mix(in srgb, #a1a1aa 40%, black)",
+          "color-mix(in srgb, #a1a1aa 58%, black)",
+          "color-mix(in srgb, #a1a1aa 76%, black)",
+          "#a1a1aa",
+          "color-mix(in srgb, #a1a1aa 76%, white)",
+          "color-mix(in srgb, #a1a1aa 52%, white)",
+          "color-mix(in srgb, #a1a1aa 28%, white)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Test-page headings and primary metric values."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Empty-state headings and inspector directive titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default UI copy, explanations, and dashboard text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, chips, segmented controls, field labels, and status text."
+      },
+      "mono": {
+        "displayName": "Dense Data Mono",
+        "purpose": "Directives, URLs, headers, policies, raw JSON, and endpoint values."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pop-light",
+        "value": "0 12px 32px -8px rgb(24 24 27 / 0.18), 0 2px 6px -2px rgb(24 24 27 / 0.08)",
+        "purpose": "Floating chart tooltip and inspector overlay in light mode."
+      },
+      {
+        "name": "pop-dark",
+        "value": "0 16px 40px -8px rgb(0 0 0 / 0.6), 0 2px 8px -2px rgb(0 0 0 / 0.4)",
+        "purpose": "Floating chart tooltip and inspector overlay in dark mode."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Shared ease for facet bars, inspector drawer, check icons, and arriving report rows."
+      },
+      {
+        "name": "arrive",
+        "value": "1600ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The one authored motion: a new report row reveals from left to right with a temporary accent wash."
+      },
+      {
+        "name": "inspector-open",
+        "value": "320ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Right-side inspector drawer transition."
+      },
+      {
+        "name": "state-transition",
+        "value": "120ms",
+        "purpose": "Button, table-row, and color state transitions."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "1ms",
+        "purpose": "Forced animation and transition duration under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "overview-collapse",
+        "value": "1100px",
+        "purpose": "Overview becomes one column and page table column is hidden."
+      },
+      {
+        "name": "workspace-collapse",
+        "value": "860px",
+        "purpose": "Workspace becomes one column; reports lead and facets follow."
+      },
+      {
+        "name": "compact-mobile",
+        "value": "640px",
+        "purpose": "Brand text, button labels, search shortcut, and less-critical table columns are hidden."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action button for empty states and decisive actions.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Copy headers</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border:1px solid transparent;border-radius:var(--radius);background:var(--text);color:var(--bg);font:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:background-color 120ms,border-color 120ms,color 120ms}.ds-btn-primary:hover{background:var(--text-2)}.ds-btn-primary:focus-visible{outline:2px solid var(--focus);outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-emphasis toolbar action with icon and text.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\"><svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2.75 3.25h10.5M2.75 8h10.5M2.75 12.75h6.5\"/></svg><span>Dashboard</span></button>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border:1px solid transparent;border-radius:var(--radius);background:transparent;color:var(--text-2);font:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:background-color 120ms,color 120ms}.ds-btn-ghost svg{width:14px;height:14px;flex:none}.ds-btn-ghost:hover{background:var(--surface-2);color:var(--text)}.ds-btn-ghost:focus-visible{outline:2px solid var(--focus);outline-offset:2px}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Dashboard report search with leading icon and keyboard hint.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"4.75\"/><path d=\"m10.5 10.5 3.25 3.25\"/></svg><input class=\"ds-input\" type=\"search\" placeholder=\"Search URLs, directives, apps…\"><kbd>/</kbd></label>",
+      "css": ".ds-search{position:relative;display:block;width:min(420px,100%);color:var(--text-3)}.ds-search svg{position:absolute;top:50%;left:9px;width:14px;height:14px;transform:translateY(-50%);pointer-events:none}.ds-input{width:100%;height:30px;padding:0 32px 0 30px;border:1px solid var(--border-strong);border-radius:var(--radius);background:var(--surface);color:var(--text);font:inherit;font-size:13px}.ds-input::placeholder{color:var(--text-3)}.ds-input:focus-visible{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 22%,transparent)}.ds-search kbd{position:absolute;top:50%;right:7px;min-width:18px;height:18px;padding:0 4px;border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:var(--radius-sm);color:var(--text-3);font:11px/16px var(--font-mono);text-align:center;transform:translateY(-50%)}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "nav",
+      "refersTo": "segmented-control",
+      "description": "Small mode/disposition selector with a tonal active item.",
+      "html": "<div class=\"ds-segmented\" role=\"group\" aria-label=\"Disposition\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\">Enforced</button><button aria-pressed=\"false\">Report-only</button></div>",
+      "css": ".ds-segmented{display:inline-flex;padding:2px;border:1px solid var(--border-strong);border-radius:var(--radius);background:var(--surface-2)}.ds-segmented button{height:24px;padding:0 10px;border:0;border-radius:var(--radius-sm);background:transparent;color:var(--text-2);font:inherit;font-size:12px;font-weight:500;line-height:24px;cursor:pointer}.ds-segmented button:hover{color:var(--text)}.ds-segmented [aria-pressed=\"true\"]{background:var(--surface);color:var(--text);box-shadow:0 1px 2px rgb(0 0 0 / .08),0 0 0 1px var(--border)}.ds-segmented button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}"
+    },
+    {
+      "name": "Disposition Pills",
+      "kind": "chip",
+      "refersTo": "pill-enforce",
+      "description": "Semantic CSP disposition chips; red means enforced and amber means report-only.",
+      "html": "<span class=\"ds-pill ds-pill-enforce\">Enforced</span> <span class=\"ds-pill ds-pill-report\">Report-only</span>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;gap:5px;height:20px;padding:0 7px;border-radius:999px;font:500 12px/1 var(--font-sans);white-space:nowrap}.ds-pill::before{content:\"\";width:6px;height:6px;border-radius:50%;background:currentColor}.ds-pill-enforce{background:var(--enforce-soft);color:var(--enforce)}.ds-pill-report{background:var(--report-soft);color:var(--report)}"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Default dashboard container with hairline border and flat surface.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-panel-head\"><h2>Activity</h2><span>Live</span></div><div class=\"ds-panel-body\">Panel content</div></section>",
+      "css": ".ds-panel{border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);color:var(--text);overflow:hidden}.ds-panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 16px 0}.ds-panel-head h2{margin:0;color:var(--text);font:600 13px/1.5 var(--font-sans)}.ds-panel-head span{color:var(--text-3);font-size:12px}.ds-panel-body{padding:12px 16px 16px;color:var(--text-2);font-size:14px}"
+    },
+    {
+      "name": "Facet Item",
+      "kind": "custom",
+      "refersTo": "facet-item",
+      "description": "Filterable breakdown row with count and categorical progress bar.",
+      "html": "<button class=\"ds-facet-item\" type=\"button\" aria-pressed=\"true\" style=\"--pct:68;--fam:var(--fam-script)\"><span class=\"ds-facet-label\"><i></i>script-src</span><span class=\"ds-facet-count\">24</span><span class=\"ds-facet-bar\"><b></b></span></button>",
+      "css": ".ds-facet-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 10px;width:100%;padding:6px 8px 8px;border:0;border-radius:var(--radius);background:transparent;color:var(--text);font:inherit;text-align:left;cursor:pointer}.ds-facet-item:hover{background:var(--surface-2)}.ds-facet-item[aria-pressed=\"true\"]{background:var(--accent-soft)}.ds-facet-label{display:inline-flex;align-items:center;gap:7px;min-width:0;overflow:hidden;font:12.5px var(--font-mono);text-overflow:ellipsis;white-space:nowrap}.ds-facet-label i{width:8px;height:8px;border-radius:2px;background:var(--fam,var(--fam-other));flex:none}.ds-facet-count{color:var(--accent-text);font-size:12px;font-weight:500;font-variant-numeric:tabular-nums}.ds-facet-bar{grid-column:1/-1;height:3px;border-radius:2px;background:var(--surface-3);overflow:hidden}.ds-facet-bar b{display:block;width:100%;height:100%;border-radius:2px;background:var(--fam,var(--text-3));transform:scaleX(calc(var(--pct,0)/100));transform-origin:left center;transition:transform 400ms var(--ease-out)}"
+    },
+    {
+      "name": "Inspector Drawer",
+      "kind": "custom",
+      "refersTo": "inspector",
+      "description": "Floating right-side report detail drawer with overlay shadow and policy highlighting.",
+      "html": "<aside class=\"ds-inspector\"><header><h2><span></span>script-src</h2><button type=\"button\">×</button></header><section><h3>Policy</h3><code>script-src 'self'</code></section></aside>",
+      "css": ".ds-inspector{width:min(520px,calc(100vw - 16px));border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);color:var(--text);box-shadow:var(--shadow-pop);overflow:hidden}.ds-inspector header{display:flex;align-items:flex-start;gap:12px;padding:16px 16px 14px;border-bottom:1px solid var(--border)}.ds-inspector h2{flex:1;display:flex;align-items:center;gap:8px;margin:0;font:600 18px/1.5 var(--font-mono);letter-spacing:-.02em}.ds-inspector h2 span{width:10px;height:10px;border-radius:2px;background:var(--fam-script)}.ds-inspector button{width:24px;height:24px;border:1px solid transparent;border-radius:var(--radius-sm);background:transparent;color:var(--text-2);cursor:pointer}.ds-inspector button:hover{background:var(--surface-2);color:var(--text)}.ds-inspector section{padding:18px 16px 24px}.ds-inspector h3{margin:0 0 8px;color:var(--text-2);font:600 12px/1.5 var(--font-sans)}.ds-inspector code{display:block;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--enforce-soft);color:var(--enforce);font:12px/1.55 var(--font-mono)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Triage Instrument",
+    "overview": "CSP Reporting Server is designed as an operating surface for a single developer, not as a promotional dashboard. The built world is restrained, neutral, and precise: quiet backgrounds, hairline panels, small controls, tabular numbers, and code-first detail create the feeling of a trustworthy diagnostic tool that stays out of the way while violations arrive live.\n\nThe system follows the category-standard craft of Linear, Vercel, and GitHub without borrowing their brands. Its personality comes from density control, exact typography, and purposeful data encoding rather than decoration. Light and dark modes are equal citizens: the same semantic tokens are defined in `:root`, mirrored through `prefers-color-scheme`, and overridden by `[data-theme=\"dark\"]` or `[data-theme=\"light\"]`.",
+    "keyCharacteristics": [
+      "Quiet neutral surfaces with one restrained blue interactive accent.",
+      "Red means enforced CSP; amber means report-only; directive colors are data encoding only.",
+      "System sans carries UI copy while monospace carries directives, URLs, policies, JSON, and endpoint values.",
+      "Hairline borders and tonal layers define structure; shadows are reserved for popovers and the inspector overlay.",
+      "Motion is nearly absent except for the authored arriving-report row."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Severity Rule",
+        "body": "Red is reserved for enforced, destructive, failed, or policy-hit states; amber is reserved for report-only. Do not use either as decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Categorical Color Rule",
+        "body": "The directive-family palette is only a data encoding system. Do not reuse script/style/media/connect/frame/other colors for brand moments, charts unrelated to directives, or general UI ornament.",
+        "section": "colors"
+      },
+      {
+        "name": "The Data Monospace Rule",
+        "body": "Directives, URLs, policies, raw JSON, endpoint values, and header snippets stay monospace. Interface copy, labels, and explanations stay in the sans stack.",
+        "section": "typography"
+      },
+      {
+        "name": "The Compact Authority Rule",
+        "body": "The dashboard earns clarity through tight type sizes and weight, not oversized headings. Keep new UI in the `12px`-`14px` control range unless it is a page heading, empty state, or primary metric.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lenses-First Rule",
+        "body": "Directive, blocked URL, app, disposition, and search controls are primary navigation. New screens should let every number or item quickly become a filter or drill-down path.",
+        "section": "layout"
+      },
+      {
+        "name": "The Dense-But-Breathable Rule",
+        "body": "Use compact rows and controls, but preserve `12px-16px` panel padding and clear border separations so the surface reads as an instrument, not a log dump.",
+        "section": "layout"
+      },
+      {
+        "name": "The Overlay-Only Shadow Rule",
+        "body": "Panels, tables, controls, and facets are flat at rest. Use the pop shadow only for temporary or floating surfaces that overlap other content.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the dashboard self-contained: external CSS and JS only, no external fonts, no CDNs, and no decorative remote assets.",
+      "Do add new data visualizations with semantic color first: severity for enforcement/report-only, categorical family color only for directive families, neutral gray for all else.",
+      "Do route dynamic presentation through CSS custom properties and CSSOM so the strict CSP-compatible model remains intact.",
+      "Do preserve light and dark parity whenever adding a reusable color token.",
+      "Do keep tables, policies, URLs, and JSON scannable with monospace type, tabular numerals, clipping, and copy affordances."
+    ],
+    "donts": [
+      "Don't introduce gradients, big hero treatments, marketing-card flourishes, or generic SaaS illustrations.",
+      "Don't use red, amber, or directive-family colors for decoration or brand expression.",
+      "Don't add new shadows to resting panels, tables, or controls.",
+      "Don't promote one-off data values or asset-local SVG colors into reusable system tokens.",
+      "Don't add inline script or inline style as a design shortcut; the dashboard is built to run under its own strict CSP."
+    ]
+  }
+}

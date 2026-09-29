@@ -1,0 +1,31 @@
+{
+  "name": "csp-reporting-server",
+  "version": "1.0.0",
+  "description": "A dependency-free Reporting API / CSP violation collection server with a live triage dashboard.",
+  "keywords": [
+    "csp",
+    "content-security-policy",
+    "reporting-api",
+    "report-to",
+    "report-uri",
+    "security"
+  ],
+  "author": "Russ Rimmerman",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:https": "node server.js --https",
+    "lint": "eslint .",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0"
+  }
+}
