@@ -1,5 +1,7 @@
 # CSP Reporting Server
 
+> **Why this exists:** This project was created to monitor CSP blocks in [Power Apps code apps](https://learn.microsoft.com/power-apps/developer/code-apps/how-to/content-security-policy). An administrator can configure a [reporting endpoint](https://learn.microsoft.com/power-apps/developer/code-apps/how-to/content-security-policy#report-csp-violations) for code apps' Content Security Policy, and the browser sends a report every time the policy blocks something (or would block it, in report-only mode). This server is that endpoint. Set the reporting endpoint to `https://<your-host>/reports/<app-name>`, then watch what the policy blocks and tighten it with confidence. Both endpoint paths accept either report format. It works just as well for any other web app.
+
 A small, dependency-free Node.js server that collects [Reporting API](https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API) reports, with a focus on Content Security Policy (CSP) violations. Point your apps at it, then triage what your policy blocks in a live dashboard.
 
 ![Dashboard in light mode: activity chart, "Connect an app" endpoints, directive/blocked-URL/app breakdowns, and the report list](docs/dashboard-light.png)
