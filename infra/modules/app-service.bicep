@@ -79,6 +79,8 @@ resource authSettings 'Microsoft.Web/sites/config@2026-08-01' = {
       unauthenticatedClientAction: 'RedirectToLoginPage'
       redirectToProvider: 'azureactivedirectory'
       excludedPaths: [
+        '/reporting'
+        '/reporting/*'
         '/reports'
         '/reports/*'
         '/csp-report'

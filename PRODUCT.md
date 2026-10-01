@@ -16,7 +16,7 @@ A small, self-hosted collector for browser Reporting API reports, with a focus o
 Zero-dependency, self-hosted, and single-purpose. It accepts both the modern Reporting API (`report-to`, `application/reports+json`) and legacy `report-uri` (`application/csp-report`), normalizes them into one shape, and streams them live. Reports never leave infrastructure the owner controls.
 
 ## Operating Context
-- The owner's apps send `Reporting-Endpoints` + `Content-Security-Policy` headers pointing to `/reports/<app-name>` (report-to) or `/csp-report/<app-name>` (report-uri). `<app-name>` is the "source" used to tell apps apart.
+- The owner's apps send `Reporting-Endpoints` + `Content-Security-Policy` headers pointing to `/reporting/<app-name>`, which accepts both report-to and report-uri. `<app-name>` is any single path segment the owner picks (for example, `/reporting/my-app`) and is the "source" used to tell apps apart. The older `/reports` and `/csp-report` paths remain as aliases.
 - Chromium batches report-to deliveries (up to about 1 minute). Firefox uses report-uri only.
 - The dashboard is used alongside a browser DevTools console while reproducing violations. It updates live over Server-Sent Events.
 - Deployed on Azure App Service (F1). The dashboard, `/api/*`, and `/test` require Entra ID sign-in, while ingestion and `/health` are anonymous. Also run locally over http://localhost:9000 or https://localhost:9443.

@@ -25,6 +25,9 @@ const ACCEPTED_CONTENT_TYPES = new Set([
   'application/json',
 ]);
 
+// First path segment of the ingestion endpoint. 'reporting' is current; the others are legacy aliases.
+const INGEST_PREFIXES = new Set(['reporting', 'reports', 'csp-report']);
+
 /** @type {object[]} */
 let reports = [];
 const sseClients = new Set();
@@ -229,9 +232,9 @@ function requestScheme(req) {
  * Browsers that support report-to ignore report-uri when both are present.
  */
 function testPageHeaders(req, mode) {
-  const endpoint = `${requestScheme(req)}://${req.headers.host}/reports/test-page`;
+  const endpoint = `${requestScheme(req)}://${req.headers.host}/reporting/test-page`;
   const directives = ["default-src 'self'", "script-src 'self'", "img-src 'self'", "style-src 'self'"];
-  if (mode !== 'report-to') directives.push('report-uri /csp-report/test-page');
+  if (mode !== 'report-to') directives.push('report-uri /reporting/test-page');
   if (mode !== 'report-uri') directives.push('report-to csp-endpoint');
   const headers = {
     'Content-Security-Policy': directives.join('; '),
@@ -272,8 +275,9 @@ async function handler(req, res) {
   const parts = pathname.split('/').filter(Boolean);
 
   try {
-    // Report ingestion: /reports[/:source] (report-to) and /csp-report[/:source] (report-uri).
-    if ((parts[0] === 'reports' || parts[0] === 'csp-report') && parts.length <= 2) {
+    // Report ingestion: /reporting[/:source] accepts either format. /reports and /csp-report
+    // are kept as aliases so endpoints configured before /reporting keep working.
+    if (INGEST_PREFIXES.has(parts[0]) && parts.length <= 2) {
       const source = parts[1] ? decodeURIComponent(parts[1]) : 'default';
       if (req.method === 'OPTIONS') {
         setCorsHeaders(req, res);
@@ -352,8 +356,7 @@ function start() {
     console.log(`CSP reporting server listening on ${base}`);
     console.log(`  Dashboard:          ${base}/`);
     console.log(`  Test page:          ${base}/test`);
-    console.log(`  report-to target:   ${base}/reports/<app-name>`);
-    console.log(`  report-uri target:  ${base}/csp-report/<app-name>`);
+    console.log(`  Report endpoint:    ${base}/reporting/<app-name> (report-to and report-uri)`);
     console.log(`  Loaded ${reports.length} stored report(s) from ${DATA_FILE}`);
   });
   return server;

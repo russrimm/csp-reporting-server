@@ -697,7 +697,8 @@
 
   function endpoints() {
     const app = encodeURIComponent(appSlug());
-    return { to: `${location.origin}/reports/${app}`, uri: `${location.origin}/csp-report/${app}` };
+    const url = `${location.origin}/reporting/${app}`;
+    return { to: url, uri: url };
   }
 
   function headerText() {

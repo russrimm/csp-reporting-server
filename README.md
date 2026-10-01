@@ -1,6 +1,6 @@
 # CSP Reporting Server
 
-> **Why this exists:** This project was created to monitor CSP blocks in [Power Apps code apps](https://learn.microsoft.com/power-apps/developer/code-apps/how-to/content-security-policy). An administrator can configure a [reporting endpoint](https://learn.microsoft.com/power-apps/developer/code-apps/how-to/content-security-policy#report-csp-violations) for code apps' Content Security Policy, and the browser sends a report every time the policy blocks something (or would block it, in report-only mode). This server is that endpoint. Set the reporting endpoint to `https://<your-host>/reports/<app-name>`, then watch what the policy blocks and tighten it with confidence. Both endpoint paths accept either report format. It works just as well for any other web app.
+> **Why this exists:** This project was created to monitor CSP blocks in [Power Apps code apps](https://learn.microsoft.com/power-apps/developer/code-apps/how-to/content-security-policy). An administrator can configure a [reporting endpoint](https://learn.microsoft.com/power-apps/developer/code-apps/how-to/content-security-policy#report-csp-violations) for code apps' Content Security Policy, and the browser sends a report every time the policy blocks something (or would block it, in report-only mode). This server is that endpoint. Set the reporting endpoint to `https://<your-host>/reporting/<app-name>`, then watch what the policy blocks and tighten it with confidence. That endpoint accepts either report format. It works just as well for any other web app.
 
 A small, dependency-free Node.js server that collects [Reporting API](https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API) reports, with a focus on Content Security Policy (CSP) violations. Point your apps at it, then triage what your policy blocks in a live dashboard.
 
@@ -41,15 +41,17 @@ npm start          # http://localhost:9000
 
 | Mechanism | CSP directive | Content-Type | Endpoint |
 |---|---|---|---|
-| Reporting API (modern) | `report-to <name>` + `Reporting-Endpoints` header | `application/reports+json` | `/reports/<app-name>` |
-| Legacy | `report-uri <url>` | `application/csp-report` | `/csp-report/<app-name>` |
+| Reporting API (modern) | `report-to <name>` + `Reporting-Endpoints` header | `application/reports+json` | `/reporting/<app-name>` |
+| Legacy | `report-uri <url>` | `application/csp-report` | `/reporting/<app-name>` |
 
-`<app-name>` is optional and tells apps apart. The dashboard's **Connect an app** panel generates these values for you. For example:
+Both mechanisms post to the same endpoint. `<app-name>` is anything you choose after `/reporting/` that identifies where the reports come from, such as `https://contoso.com/reporting/my-app`. It shows up as the app name in the dashboard. Use a single path segment (letters, numbers, `.`, `_`, and `-`; no `/`). If you leave it off, reports are filed under `default`. The dashboard's **Connect an app** panel generates these values for you. For example:
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://reports.example.com/reports/my-app"
-Content-Security-Policy-Report-Only: default-src 'self'; report-to csp-endpoint; report-uri https://reports.example.com/csp-report/my-app
+Reporting-Endpoints: csp-endpoint="https://reports.example.com/reporting/my-app"
+Content-Security-Policy-Report-Only: default-src 'self'; report-to csp-endpoint; report-uri https://reports.example.com/reporting/my-app
 ```
+
+The earlier `/reports/<app-name>` and `/csp-report/<app-name>` paths are still accepted, so existing configurations keep working.
 
 Use `Content-Security-Policy` instead of `-Report-Only` to enforce. Reports are sent cross-origin, so the server answers CORS preflight (`OPTIONS`) requests and reflects the request `Origin`.
 
@@ -80,7 +82,7 @@ npm run start:https   # https://localhost:9443
 
 | Method | Path | Description |
 |---|---|---|
-| `POST` | `/reports[/<app>]`, `/csp-report[/<app>]` | Ingest reports (returns `204`) |
+| `POST` | `/reporting[/<app>]` (legacy: `/reports`, `/csp-report`) | Ingest reports in either format (returns `204`) |
 | `GET` | `/api/reports?type=&source=` | List stored reports (optional filters) |
 | `DELETE` | `/api/reports` | Clear all reports |
 | `GET` | `/api/stream` | Server-Sent Events stream (`report`, `cleared`) |
@@ -89,7 +91,7 @@ npm run start:https   # https://localhost:9443
 Example:
 
 ```sh
-curl -X POST http://localhost:9000/reports/my-app -H "Content-Type: application/reports+json" \
+curl -X POST http://localhost:9000/reporting/my-app -H "Content-Type: application/reports+json" \
   -d '[{"type":"csp-violation","url":"https://app.example/","body":{"effectiveDirective":"img-src","blockedURL":"https://evil.example/x.png","disposition":"enforce"}}]'
 ```
 
@@ -106,7 +108,7 @@ curl -X POST http://localhost:9000/reports/my-app -H "Content-Type: application/
 
 ## Deploy to Azure (optional)
 
-`infra/` contains Bicep for **Azure App Service (Linux, Node 22, F1 Free tier)** plus Log Analytics and Application Insights. **App Service Authentication (Microsoft Entra ID)** protects the dashboard, `/api/*`, and `/test`. `/reports`, `/csp-report`, and `/health` stay anonymous so browsers can deliver reports. Reports persist to `/home/data`.
+`infra/` contains Bicep for **Azure App Service (Linux, Node 22, F1 Free tier)** plus Log Analytics and Application Insights. **App Service Authentication (Microsoft Entra ID)** protects the dashboard, `/api/*`, and `/test`. `/reporting` (plus the legacy `/reports` and `/csp-report`) and `/health` stay anonymous so browsers can deliver reports. Reports persist to `/home/data`. If you deployed before `/reporting` existed, re-run step 3 so App Service Authentication lets it through; otherwise browsers get redirected to sign in instead of delivering reports.
 
 1. **Choose a globally unique `environmentName`** (3–40 characters). The web app becomes `app-<environmentName>.azurewebsites.net`, and the other resources are `rg-`, `asp-`, `log-`, and `appi-<environmentName>`. Edit `infra/main.parameters.json`, or pass `environmentName=...` on the command line.
 2. **Create the Entra app registration** used for sign-in (single-tenant, ID tokens, no client secret):

@@ -54,7 +54,7 @@ test('parses legacy report-uri reports', () => {
 });
 
 test('accepts application/reports+json and exposes it via the API', async () => {
-  const res = await fetch(`${base}/reports/my-app`, {
+  const res = await fetch(`${base}/reporting/my-app`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/reports+json', Origin: 'https://app.example' },
     body: JSON.stringify([
@@ -69,17 +69,44 @@ test('accepts application/reports+json and exposes it via the API', async () => 
   assert.equal(data.reports[0].effectiveDirective, 'img-src');
 });
 
-test('accepts application/csp-report', async () => {
-  const res = await fetch(`${base}/csp-report`, {
+test('accepts application/csp-report on /reporting and records the source', async () => {
+  const res = await fetch(`${base}/reporting/legacy-app`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/csp-report' },
     body: JSON.stringify({ 'csp-report': { 'document-uri': 'https://a/', 'effective-directive': 'style-src-elem' } }),
   });
   assert.equal(res.status, 204);
+  const data = await (await fetch(`${base}/api/reports?source=legacy-app`)).json();
+  assert.equal(data.count, 1);
+  assert.equal(data.reports[0].format, 'report-uri');
+});
+
+test('still accepts the legacy /reports and /csp-report paths', async () => {
+  const to = await fetch(`${base}/reports/old-to`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/reports+json' },
+    body: JSON.stringify([{ type: 'csp-violation', url: 'https://a/', body: { effectiveDirective: 'img-src' } }]),
+  });
+  assert.equal(to.status, 204);
+  const uri = await fetch(`${base}/csp-report`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/csp-report' },
+    body: JSON.stringify({ 'csp-report': { 'document-uri': 'https://a/', 'effective-directive': 'style-src-elem' } }),
+  });
+  assert.equal(uri.status, 204);
+});
+
+test('rejects nested names under /reporting', async () => {
+  const res = await fetch(`${base}/reporting/team/my-app`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/reports+json' },
+    body: '[]',
+  });
+  assert.equal(res.status, 404);
 });
 
 test('handles CORS preflight', async () => {
-  const res = await fetch(`${base}/reports`, {
+  const res = await fetch(`${base}/reporting`, {
     method: 'OPTIONS',
     headers: { Origin: 'https://app.example', 'Access-Control-Request-Method': 'POST' },
   });
@@ -88,9 +115,9 @@ test('handles CORS preflight', async () => {
 });
 
 test('rejects unsupported content types and bad JSON', async () => {
-  const bad = await fetch(`${base}/reports`, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: 'x' });
+  const bad = await fetch(`${base}/reporting`, { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: 'x' });
   assert.equal(bad.status, 415);
-  const invalid = await fetch(`${base}/reports`, {
+  const invalid = await fetch(`${base}/reporting`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/reports+json' },
     body: '{nope',
@@ -102,13 +129,13 @@ test('test page sends CSP and Reporting-Endpoints headers', async () => {
   const res = await fetch(`${base}/test`);
   assert.equal(res.status, 200);
   assert.match(res.headers.get('content-security-policy'), /report-to csp-endpoint/);
-  assert.match(res.headers.get('content-security-policy'), /report-uri /);
-  assert.match(res.headers.get('reporting-endpoints'), /csp-endpoint="http:\/\/.+\/reports\/test-page"/);
+  assert.match(res.headers.get('content-security-policy'), /report-uri \/reporting\/test-page/);
+  assert.match(res.headers.get('reporting-endpoints'), /csp-endpoint="http:\/\/.+\/reporting\/test-page"/);
 });
 
 test('test page honors X-Forwarded-Proto behind a TLS-terminating proxy', async () => {
   const res = await fetch(`${base}/test`, { headers: { 'X-Forwarded-Proto': 'https' } });
-  assert.match(res.headers.get('reporting-endpoints'), /csp-endpoint="https:\/\/.+\/reports\/test-page"/);
+  assert.match(res.headers.get('reporting-endpoints'), /csp-endpoint="https:\/\/.+\/reporting\/test-page"/);
 });
 
 test('test page mode selects report-to or report-uri only', async () => {
